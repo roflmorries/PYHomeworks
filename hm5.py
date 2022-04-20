@@ -37,8 +37,7 @@ def get_id(id):
     for user in range(len(ALL_USERS)):
         if ALL_USERS[user]['id'] == id:
             return jsonify(ALL_USERS[id - 1]['username'], ALL_USERS[id - 1]['age'])
-        else:
-            return 'Пользователя с таким ID не существует!'
+        return 'Пользователя с таким ID не существует!'
 
 
 app.run('localhost', 8000)
