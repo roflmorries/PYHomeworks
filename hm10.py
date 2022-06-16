@@ -40,6 +40,6 @@ def update_article(id, title, text):
 
 # Получение статьи
 def get_article(search):
-	cursor.execute(f"SELECT * FROM articles WHERE title OR text Like '%{search}%'")
+	cursor.execute(f"SELECT * FROM acticles WHERE title LIKE '%{search}%' OR text LIKE '%{search}%'")
 	result = cursor.fetchall()
 	print(result)
